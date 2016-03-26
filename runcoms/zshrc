@@ -11,3 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export EDITOR="vim"
+export VISUAL="vim"
+
+export DEFAULT_USER=$(whoami)
+export BROWSER=firefox
+
+if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+  source "/usr/local/bin/virtualenvwrapper.sh"
+fi
+
