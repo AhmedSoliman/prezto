@@ -21,3 +21,6 @@ if [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]]; then
   source "/usr/local/bin/virtualenvwrapper.sh"
 fi
 
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc-secrets" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc-secrets"
+fi

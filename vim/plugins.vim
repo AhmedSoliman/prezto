@@ -2,14 +2,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-surround'
 " Appearance
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Bundle 'rdnetto/YCM-Generator'
 Bundle 'skwp/vim-colors-solarized'
-Bundle 'chriskempson/base16-vim'
+" Bundle 'chriskempson/base16-vim'
 
 " Tmux Integration
 Plugin 'christoomey/vim-tmux-navigator'

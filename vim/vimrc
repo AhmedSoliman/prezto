@@ -24,6 +24,8 @@ set ruler
 set showbreak=… " show ellipsis at breaking
 set linebreak
 set smartindent
+set ignorecase
+set smartcase
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set laststatus=2 " Show Vim Status Line All The Time
@@ -95,6 +97,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " CtrlP Configuration
 set wildignore+=*/target/*
 
+" let g:ctrlp_working_path_mode = 'a'
+" let g:ctrlp_extensions = ['autoignore']
+" let g:ctrlp_cmd = 'CtrlPMixed'
+
 " Ensime Configuration
 let EnErrorStyle='Underline'
 
@@ -114,7 +120,7 @@ let g:cpp_class_scope_highlight = 1
 " let g:rustfmt_autosave = 1
 " TagList
 "
-nmap <C-m> :TlistToggle<cr>
+nmap <C-m> :TagBar<cr>
 
 
 " Haskell Stuff
@@ -123,6 +129,7 @@ let g:haddock_browser="/Applications/Safari.app/Contents/MacOS/Safari"
 au BufEnter *.hs compiler ghc
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+let g:ycm_confirm_extra_conf = 0
 " Syntastic Config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -134,3 +141,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 au BufEnter *.scala setl formatprg=java\ -jar\ /usr/local/Cellar/scalariform/0.1.6/libexec/scalariform.jar\ -f\ -q\ +compactControlReadability\ +alignParameters\ +alignSingleLineCaseStatements\ +doubleIndentClassDeclaration\ +preserveDanglingCloseParenthesis\ +rewriteArrowSymbols\ +preserveSpaceBeforeArguments\ --stdin\ --stdout
+
+set visualbell
+map <C-M> :Tagbar<CR>
+
+map <C-F> :pyf /usr/local/Cellar/clang-format/2016-01-05/share/clang/clang-format.py<CR>
+imap <C-F> :pyf /usr/local/Cellar/clang-format/2016-01-05/share/clang/clang-format.py<CR>
+
+set hlsearch
+
+syntax enable
+set background=dark
+colorscheme solarized
